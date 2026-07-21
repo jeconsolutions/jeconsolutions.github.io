@@ -276,11 +276,6 @@
     box-shadow: 0 4px 20px rgba(0,89,187,0.1);
   }
 
-  /* Stats counter animation */
-  .stat-number {
-    font-variant-numeric: tabular-nums;
-  }
-
   /* Navigation scroll state */
   .nav-scrolled {
     background: rgba(255, 255, 255, 0.95) !important;
@@ -344,43 +339,6 @@
     width: 100%;
   }
 
-  /* Loading skeleton shimmer */
-  .skeleton-shimmer {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: skeleton 1.5s infinite;
-  }
-
-  @keyframes skeleton {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
-  /* Pulse ring */
-  .pulse-ring {
-    position: relative;
-  }
-
-  .pulse-ring::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    border-radius: inherit;
-    border: 2px solid rgba(0,89,187,0.3);
-    animation: pulseRing 2s infinite;
-  }
-
-  @keyframes pulseRing {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.2); opacity: 0; }
-  }
-
-  /* Stagger children */
-  .stagger-children > * {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
   /* Mobile menu */
   .mobile-menu {
     transform: translateX(100%);
@@ -404,7 +362,6 @@
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary/30 antialiased">
 
-<!-- Navigation -->
 <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md transition-all duration-500">
   <div class="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto">
     <div class="h-10 w-auto flex items-center">
@@ -417,14 +374,15 @@
     <div class="hidden md:flex gap-8 items-center">
       <a class="animated-underline text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 font-label tracking-wide text-sm py-1" href="#solutions">Solutions</a>
       <a class="animated-underline text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors font-label tracking-wide text-sm py-1" href="#engineering">Engineering</a>
-      <!-- <a class="animated-underline text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors font-label tracking-wide text-sm py-1" href="#portfolio">Portfolio</a> -->
       <a class="animated-underline text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors font-label tracking-wide text-sm py-1" href="#process">Process</a>
       <a class="animated-underline text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors font-label tracking-wide text-sm py-1" href="#contact">Contact</a>
     </div>
 
-    <button class="hidden md:flex magnetic-btn bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-bold transition-all active:scale-95 shadow-lg shadow-primary/20 font-label text-sm uppercase tracking-widest hover:shadow-primary/40 hover:-translate-y-0.5">
-      Get a Quote
-    </button>
+    <!-- WhatsApp Get a Quotation Button -->
+    <a href="https://wa.me/94704421898?text=Hello%20Jecon%20Solutions,%20I%20would%20like%20to%20get%20a%20quotation." target="_blank" class="hidden md:flex items-center gap-2 magnetic-btn bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-bold transition-all active:scale-95 shadow-lg shadow-primary/20 font-label text-sm uppercase tracking-widest hover:shadow-primary/40 hover:-translate-y-0.5">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      Get a Quotation
+    </a>
 
     <!-- Mobile Menu Button -->
     <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-700">
@@ -440,12 +398,13 @@
   </button>
   <a class="text-2xl font-headline font-bold text-slate-800 hover:text-primary transition-colors" href="#solutions">Solutions</a>
   <a class="text-2xl font-headline font-bold text-slate-800 hover:text-primary transition-colors" href="#engineering">Engineering</a>
-  <!-- <a class="text-2xl font-headline font-bold text-slate-800 hover:text-primary transition-colors" href="#portfolio">Portfolio</a> -->
   <a class="text-2xl font-headline font-bold text-slate-800 hover:text-primary transition-colors" href="#process">Process</a>
   <a class="text-2xl font-headline font-bold text-slate-800 hover:text-primary transition-colors" href="#contact">Contact</a>
-  <button class="mt-4 bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-lg font-bold font-label uppercase tracking-widest">
-    Get a Quote
-  </button>
+  
+  <a href="https://wa.me/94704421898?text=Hello%20Jecon%20Solutions,%20I%20would%20like%20to%20get%20a%20quotation." target="_blank" class="mt-4 flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-lg font-bold font-label uppercase tracking-widest">
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    Get a Quotation
+  </a>
 </div>
 
 <main class="pt-20">
@@ -483,29 +442,11 @@
       </p>
 
       <div class="flex flex-wrap gap-4 pt-4 hero-fade">
-        <button class="magnetic-btn px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-black flex items-center gap-2 hover:shadow-2xl hover:shadow-primary/40 transition-all group font-label uppercase tracking-widest text-sm shimmer">
-          Get a Quote
+        <a href="https://wa.me/94704421898?text=Hello%20Jecon%20Solutions,%20I%20would%20like%20to%20get%20a%20quotation." target="_blank" class="magnetic-btn px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-black flex items-center gap-2 hover:shadow-2xl hover:shadow-primary/40 transition-all group font-label uppercase tracking-widest text-sm shimmer">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Get a Quotation
           <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </button>
-        <button class="px-8 py-4 bg-surface-container-high text-primary rounded-xl font-black hover:bg-surface-container-highest transition-all font-label uppercase tracking-widest text-sm border border-outline-variant/30 hover:border-primary/30">
-          Explore Portfolio
-        </button>
-      </div>
-
-      <!-- Stats -->
-      <div class="flex gap-8 pt-8 hero-fade border-t border-outline-variant/20">
-        <!-- <div>
-          <div class="text-3xl font-headline font-bold text-primary stat-number" data-target="150">0</div>
-          <div class="text-xs font-label text-slate-500 uppercase tracking-widest mt-1">Projects</div>
-        </div>
-        <div>
-          <div class="text-3xl font-headline font-bold text-primary stat-number" data-target="12">0</div>
-          <div class="text-xs font-label text-slate-500 uppercase tracking-widest mt-1">Years</div>
-        </div>
-        <div>
-          <div class="text-3xl font-headline font-bold text-primary stat-number" data-target="98">0</div>
-          <div class="text-xs font-label text-slate-500 uppercase tracking-widest mt-1">% Success</div>
-        </div> -->
+        </a>
       </div>
     </div>
 
@@ -522,14 +463,6 @@
           </p>
           <p class="text-sm font-bold text-slate-800 font-body leading-snug">Advanced PCB Routing & Thermal Analysis Integration</p>
         </div>
-
-        <!-- Top Right Badge -->
-        <!-- <div class="absolute top-6 right-6 px-4 py-2 bg-white/90 backdrop-blur-md rounded-lg shadow-lg">
-          <div class="flex items-center gap-2">
-            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span class="text-xs font-label font-black text-slate-700 uppercase tracking-wider">Live Projects</span>
-          </div>
-        </div> -->
       </div>
 
       <!-- Decorative Elements -->
@@ -735,31 +668,6 @@
   </div>
 </section>
 
-<!-- Stats Banner -->
-<!-- <section class="py-16 px-6 md:px-8 bg-gradient-to-r from-primary to-primary-container relative overflow-hidden">
-  <div class="absolute inset-0 circuit-grid opacity-20"></div>
-  <div class="max-w-7xl mx-auto relative z-10">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-      <div class="space-y-2">
-        <div class="text-4xl md:text-5xl font-headline font-bold text-white stat-number" data-target="150">0</div>
-        <div class="text-xs font-label text-blue-100 uppercase tracking-widest">Projects Delivered</div>
-      </div>
-      <div class="space-y-2">
-        <div class="text-4xl md:text-5xl font-headline font-bold text-white stat-number" data-target="45">0</div>
-        <div class="text-xs font-label text-blue-100 uppercase tracking-widest">Engineers</div>
-      </div>
-      <div class="space-y-2">
-        <div class="text-4xl md:text-5xl font-headline font-bold text-white stat-number" data-target="12">0</div>
-        <div class="text-xs font-label text-blue-100 uppercase tracking-widest">Years Experience</div>
-      </div>
-      <div class="space-y-2">
-        <div class="text-4xl md:text-5xl font-headline font-bold text-white stat-number" data-target="98">0</div>
-        <div class="text-xs font-label text-blue-100 uppercase tracking-widest">% Client Satisfaction</div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 <!-- Engineering Lifecycle -->
 <section id="process" class="py-24 px-6 md:px-8 bg-slate-950 text-white relative border-t border-slate-800 overflow-hidden">
   <div class="circuit-grid absolute inset-0 opacity-5"></div>
@@ -862,7 +770,7 @@
           </div>
           <div class="flex items-center gap-4 group cursor-pointer hover:translate-x-2 transition-transform">
             <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-              <span class="material-symbols-outlined">call</span>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
             </div>
             <span>+94 70 442 1898</span>
           </div>
@@ -889,31 +797,31 @@
         <form class="space-y-8" id="contactForm">
           <div class="floating-input space-y-2">
             <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest font-label">Full Name</label>
-            <input class="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 py-3 px-0 font-body text-sm transition-all outline-none" placeholder="John Doe" type="text"/>
+            <input id="name" class="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 py-3 px-0 font-body text-sm transition-all outline-none" placeholder="John Doe" type="text" required/>
           </div>
           <div class="floating-input space-y-2">
             <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest font-label">Email Address</label>
-            <input class="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 py-3 px-0 font-body text-sm transition-all outline-none" placeholder="john@company.com" type="email"/>
+            <input id="email" class="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 py-3 px-0 font-body text-sm transition-all outline-none" placeholder="john@company.com" type="email" required/>
           </div>
           <div class="floating-input space-y-2">
             <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest font-label">Project Type</label>
-            <select class="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 py-3 px-0 font-body text-sm transition-all outline-none text-slate-600">
-              <option>Select a service...</option>
-              <option>PCB Design</option>
-              <option>Embedded Systems</option>
-              <option>CAD Modeling</option>
-              <option>IoT Solutions</option>
-              <option>Mechatronics</option>
-              <option>Simulations</option>
+            <select id="service" class="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 py-3 px-0 font-body text-sm transition-all outline-none text-slate-600">
+              <option value="Not Specified">Select a service...</option>
+              <option value="PCB Design">PCB Design</option>
+              <option value="Embedded Systems">Embedded Systems</option>
+              <option value="CAD Modeling">CAD Modeling</option>
+              <option value="IoT Solutions">IoT Solutions</option>
+              <option value="Mechatronics">Mechatronics</option>
+              <option value="Simulations">Simulations</option>
             </select>
           </div>
           <div class="floating-input space-y-2">
             <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest font-label">Project Details</label>
-            <textarea class="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 py-3 px-0 font-body text-sm transition-all outline-none resize-none" placeholder="Tell us about your technical requirements..." rows="4"></textarea>
+            <textarea id="details" class="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 py-3 px-0 font-body text-sm transition-all outline-none resize-none" placeholder="Tell us about your technical requirements..." rows="4" required></textarea>
           </div>
           <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-black font-label uppercase tracking-widest rounded-xl hover:shadow-xl hover:shadow-primary/30 transition-all text-sm group flex items-center justify-center gap-2">
-            Send Message
-            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+            Send via WhatsApp
+            <svg class="w-5 h-5 fill-current group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
           </button>
         </form>
       </div>
@@ -969,8 +877,8 @@
 <div id="toast" class="fixed bottom-8 right-8 bg-slate-900 text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-500 z-50 flex items-center gap-3">
   <span class="material-symbols-outlined text-green-400">check_circle</span>
   <div>
-    <div class="font-label font-bold text-sm">Message Sent!</div>
-    <div class="text-xs text-slate-400">We'll get back to you within 24 hours.</div>
+    <div class="font-label font-bold text-sm">Message Prepared!</div>
+    <div class="text-xs text-slate-400">Redirecting you to WhatsApp...</div>
   </div>
 </div>
 
@@ -1065,7 +973,7 @@
     duration: 0.9,
     stagger: 0.06,
     ease: "power3.out",
-    clearProps: "all", // THIS LINE FIXES THE JUMP GLITCH
+    clearProps: "all", 
     scrollTrigger: {
       trigger: '#solutions .grid',
       start: "top 80%",
@@ -1129,7 +1037,6 @@
 
   // 3D Tilt effect for cards
   document.querySelectorAll('.tilt-card').forEach(card => {
-    // Disable CSS transition when the mouse enters to prevent lag when tracking
     card.addEventListener('mouseenter', () => {
       card.style.transition = 'none';
     });
@@ -1141,23 +1048,37 @@
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
       
-      // Calculate rotation based on cursor position relative to center
       const rotateX = -((y - centerY) / 20); 
       const rotateY = (x - centerX) / 20;
 
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
     });
 
-    // Re-enable smooth transition when mouse leaves to snap back to default gracefully
     card.addEventListener('mouseleave', () => {
       card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
       card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
     });
   });
 
-  // Form submission
+  // Form submission redirect to WhatsApp
   document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
+    
+    // Extract form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const service = document.getElementById('service').value;
+    const details = document.getElementById('details').value;
+
+    // Construct WhatsApp message
+    const rawText = `Hello Jecon Solutions,\n\nI am contacting you from the website.\n\n*Name:* ${name}\n*Email:* ${email}\n*Project Type:* ${service}\n*Details:* ${details}`;
+    const encodedText = encodeURIComponent(rawText);
+    const whatsappUrl = `https://wa.me/94704421898?text=${encodedText}`;
+
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+
+    // Show toast
     const toast = document.getElementById('toast');
     toast.style.transform = 'translateY(0)';
     toast.style.opacity = '1';
